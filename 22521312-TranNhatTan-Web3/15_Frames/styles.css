@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 100%;
+}
+
+#tieude {
+    width: 100%;
+    height: 130px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 5px #4E00A4;
+    text-align: center;
+    background: url(../images/nen-hoa-co.jpg) no-repeat;
+    background-size: cover;
+}
+
+#tieude h1 {
+    padding-top: 50px;
+}
+
+#menu {
+    width: 20%;
+    min-height: 570px;
+    float: left;
+    background: url(../images/nen-hoa-muc-luc.png) left bottom repeat-x, linear-gradient(#76ED15, #BDF405);
+}
+
+#menu ul {
+    list-style-type: none;
+    line-height: 25px;
+    text-shadow: 1px 1px 5px #000000;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#menu ul a {
+    display: list-item;
+    list-style-position: inside;
+    width: 65%;
+    color: #FFFFFF;
+    margin: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #000000;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transition: width 1s;
+}
+#menu ul a:hover {
+    width: 85%;
+    color: #F801FF;
+    background-image: linear-gradient(to right,rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+}
+#content {
+    width: 80%;
+    min-height: 570px;
+    float: right;
+}

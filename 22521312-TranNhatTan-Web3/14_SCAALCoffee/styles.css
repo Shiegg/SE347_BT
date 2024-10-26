@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Đảm bảo chiều cao toàn bộ màn hình */
+    font-family: Arial, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Kéo dài toàn bộ chiều cao màn hình */
+    position: relative; /* Để nội dung bên trong có thể căn vị trí tuyệt đối */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.header .scaal-logo {
+    width: auto;
+    max-width: 100%;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    flex: 1; /* Kéo dài phần nội dung hết màn hình */
+    margin-left: 400px;
+}
+
+.content .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.content .menu img {
+    width: 100px;
+    cursor: pointer;
+}
+
+.content .main-content {
+    display: flex; /* Đặt flex để sắp xếp phần tử con theo hàng ngang */
+    flex: 1;
+    padding: 0 0px;
+    background-color: #CD9934;
+    color: black;
+    margin-right: 590px;
+    position: relative;
+}
+
+.main-content p {
+    margin: 10px 0;
+}
+
+#textContent {
+    flex: 1;
+    min-width: 310px;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.side-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 20px; 
+}
+
+.side-image img {
+    width: 150px;
+}
+
+/* Đưa global_a và global_b xuống sát cạnh dưới màn hình */
+.global_a {
+    position: absolute;
+    bottom: 20px;
+    width: 100px; /* Kích thước tùy chỉnh */
+}
+
+.global_b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 166px; /* Kích thước tùy chỉnh */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Registration</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>ĐĂNG KÝ DU LỊCH</h1>
+        <form id="registrationForm">
+            <table>
+                <tr>
+                    <td><label for="fullName">Họ tên</label></td>
+                    <td><input type="text" id="fullName" name="fullName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Địa chỉ</label></td>
+                    <td><textarea id="address" name="address" rows="3" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Điện thoại</label></td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td><label for="isVietnamese">Khách Việt Nam</label></td>
+                    <td><input type="checkbox" id="isVietnamese" name="isVietnamese" checked></td>
+                </tr>
+                <tr>
+                    <td><label for="tour">Chọn tour</label></td>
+                    <td>
+                        <select id="tour" name="tour" required>
+                            <option value="1">Hà Nội - Hạ Long - Sapa</option>
+                            <option value="2">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="3">Hà Nội - Cát Bà - Tuần Châu</option>
+                            <option value="4">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="5">Nha Trang - Đà Lạt</option>
+                            <option value="6">Buôn Mê Thuột - Gia Lai - Kontum</option>
+                            <option value="7">TpHCM - Cần Thơ - Cà Mau</option>
+                            <option value="8" selected>Phú Quốc - Côn Đảo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="vehicle">Phương tiện</label></td>
+                    <td class="vehicle-options">
+                        <input type="radio" id="plane" name="vehicle" value="plane" checked>
+                        <label for="plane">Máy bay</label>
+                        <input type="radio" id="bus" name="vehicle" value="bus">
+                        <label for="bus">Xe du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Số lượng đoàn khách</label></td>
+                    <td>
+                        <label for="adults">Người lớn</label>
+                        <input type="number" id="adults" name="adults" min="1" required>
+                        <label for="children">Trẻ em</label>
+                        <input type="number" id="children" name="children" min="0" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="notes">Ghi chú thêm</label></td>
+                    <td>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-button">
+                        <button type="submit">Đồng ý</button>
+                        
+                    </td>
+                </tr>
+            </table>
+            <p id="successMessage">Bạn đã đăng ký thành công!!!</p>
+        </form>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

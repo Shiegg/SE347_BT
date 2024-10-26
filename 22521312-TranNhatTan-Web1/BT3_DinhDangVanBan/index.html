@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng văn bản</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #main {
+
+        }
+
+        #header {
+
+        }
+
+        #header p {
+            color: #00CC00;
+            text-align: center;
+            margin: 40px 0px 20px 0px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #content {
+            margin: 0px 360px;
+        }
+
+        #content p {
+           margin-bottom: 20px;
+        }
+
+        #content .subject {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #content .text {
+            font-style: italic;
+        }
+
+        #content .formula {
+            color: red;
+        }
+
+        #content .code {
+            min-height: 100px;
+            background-color: #CCC;
+        }
+
+        #content .code .code-text {
+            color: blue;
+            line-height: 2em;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px 60px;
+        }
+
+    </style>
+
+    <div id="main">
+
+        <div id="header">
+            <p>Định dạng văn bản</p>
+        </div>
+
+        <div id="content">
+            <p>
+                <span class="subject">Hoá học:</span>
+                <span class="text"> Nước:</span>
+                <span class="formula"> H<sub>2</sub>O</span>
+                <span>;</span>
+                <span class="text">Axit Sunfuric: </span>
+                <span class="formula">H<sub>2</sub>SO<sub>4</sub></span>
+            </p>
+
+            <p>
+                <span class="subject">Toán học:</span>
+                <span class="text"> Phương trình bậc 2: </span>
+                <span class="formula">ax<sup>2</sup> + bx + c = 0</span>
+            </p>
+
+            <p>
+                <span class="subject">Tin học:</span>
+                <span class="text"> Vòng lặp for: </span>
+            </p>
+
+            <div class="code">
+                <p class="code-text"> int tong = 0; <br>
+                    for(int i = 1; i = 10; i++) <br>
+                    <span style="margin-left: 44px;">tong += i;</span> <br>
+                    printf("Tong cac so tu 1 => 10 la: %d\n",tong);
+                </p>    
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
