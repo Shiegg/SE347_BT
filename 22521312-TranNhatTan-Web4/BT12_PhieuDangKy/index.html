@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js"></script>
+    <title>Phiếu đăng ký</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            color: #0860B1;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            text-shadow: 0px 0px 10px #007CFF, -2px -2px 2px #0024F9, 1px 1px 1px #0009BC;
+        }
+
+        table {
+            background: url(../images/khuyen-mai.png) center bottom no-repeat;
+            background-size: contain;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 5px 5px 10px #0066E0;
+        }
+
+        .txt {
+            background-color: rgba(0, 139, 253, 0.25);
+            border: 1px dotted #0066E0;
+            border-radius: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .btn {
+            background-image: linear-gradient(#1A5ACB, #00A5C7);
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 5px;
+            border: 2px solid #00CBFF;
+            
+        }
+
+        #thongbao {
+            color: #F000FF;
+            font-style: italic;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            table {
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            td {
+                display: block;
+                text-align: left;
+            }
+
+            td[align="right"] {
+                text-align: left;
+            }
+
+            .txt,
+            .btn {
+                width: 100%;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>Phiếu đăng ký</h1>
+        </header>
+        <form action="xulydangky.php" method="post" name="frmDangKy" id="frmDangKy" onsubmit="return ValidForm();">
+            <article>
+                <table cellspacing="5" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td align="right">Họ tên</td>
+                            <td><input name="txtHoTen" type="text" autofocus class="txt" id="txtHoTen" size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Địa chỉ</td>
+                            <td><textarea name="txtDiaChi" cols="30" rows="5" maxlength="50" class="txt" id="txtDiaChi"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Email</td>
+                            <td><input name="txtEmail" type="text" class="txt" id="txtEmail"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Điện thoại</td>
+                            <td><input name="txtDienThoai" type="tel" class="txt" id="txtDienThoai"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Giới tính</td>
+                            <td>
+                                <input name="rdoGioiTinh" type="radio" id="nam" value="1" checked>
+                                <label for="nam">Nam</label>
+                                <input name="rdoGioiTinh" type="radio" id="nu" value="0">
+                                <label for="nu">Nữ</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Nghề nghiệp</td>
+                            <td>
+                                <select name="cboNgheNghiep" class="txt" id="cboNgheNghiep">
+                                    <option value="1">Giáo viên</option>
+                                    <option value="2" selected>Sinh viên</option>
+                                    <option value="3">Bác sỹ</option>
+                                    <option value="4">Khác</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Chọn sản phẩm</td>
+                            <td>
+                                <select name="listSanPham" class="txt" id="listSanPham" multiple size="4">
+                                    <option value="1" selected>Kem đánh răng</option>
+                                    <option value="2">Dầu gội</option>
+                                    <option value="3">Sữa tắm</option>
+                                    <option value="4">Bột giặt</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Dự đoán số người tham gia</td>
+                            <td><input name="number" type="number" class="txt" id="number" min="1" step="1" value="1"></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2">
+                                <input name="btnDangKy" type="submit" class="btn" id="btnDangKy" value="Đăng ký">
+                                <input name="btnLamLai" type="reset" class="btn" id="btnLamLai" value="Làm lại" onclick="LamLai();">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <footer>
+                <div align="center">
+                    <label id="thongbao"></label>
+                </div>
+            </footer>
+        </form>
+    </section>
+</body>
+
+</html>

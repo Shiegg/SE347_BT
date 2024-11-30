@@ -1,0 +1,178 @@
+ /* Toàn bộ CSS giữ nguyên từ trước */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+header .scaal-logo {
+    width: auto;
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    flex: 1;
+    margin-left: 400px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+nav img {
+    width: 100px;
+    cursor: pointer;
+}
+
+article {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    background-color: #CD9934;
+    color: black;
+    margin-right: 590px;
+    position: relative;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+#textContent {
+    flex: 1;
+    min-width: 310px;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.side-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 20px;
+}
+
+.side-image img {
+    width: 150px;
+}
+
+.global_a {
+    position: absolute;
+    bottom: 20px;
+    width: 100px;
+}
+
+.global_b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 166px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px; /* Giảm khoảng cách */
+    }
+
+    .global_b {
+        width: 120px; /* Thu nhỏ logo */
+    }
+
+    .side-image img {
+        width: 120px; /* Giảm kích thước ảnh */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Chuyển sang dạng cột */
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 20px; /* Chuyển menu thành hàng ngang */
+        justify-content: center;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    article {
+        flex-direction: column;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    #textContent {
+        margin: 0 10px;
+        text-align: center; /* Căn giữa nội dung */
+    }
+
+    .side-image {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px; /* Ảnh cạnh nhau */
+    }
+
+    .side-image img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav img {
+        width: 60px; /* Giảm kích thước menu */
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header .scaal-logo {
+        width: 80%; /* Thu nhỏ logo */
+    }
+
+    .side-image img {
+        width: 80px;
+    }
+
+    article p {
+        font-size: 14px; /* Thu nhỏ chữ */
+    }
+
+    .global_a,
+    .global_b {
+        display: none; /* Ẩn logo nếu màn hình quá nhỏ */
+    }
+}
